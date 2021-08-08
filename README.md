@@ -1,1 +1,1 @@
-alert("hello word")
+<script src="test.js"></script>
