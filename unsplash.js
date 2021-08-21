@@ -5,7 +5,7 @@ function pic(e){
     var option=""
     for(i=0;i<result.results.length;i++){
     
-    string=string+"<img src='"+result.results[i].urls.thumb+"'>";
+    string=string+"<a href='"+result.results[i].urls.full+"'><img src='"+result.results[i].urls.thumb+"'></a>";
     if(i==e){
     option=option+"<option value='"+i+"' selected>"+(i+1)+"</option>";
     }else{
@@ -13,7 +13,7 @@ function pic(e){
     }
     
     }
-    string="<select onchange=pic(this.value);>"+option+"</select><br>"+string;
+    string="<select onchange=pic(this.value);>"+option+"</select><br><br><br>"+string;
       $("#div1").html(string);
     }});
 }pic(0)
