@@ -5,7 +5,7 @@ function pic(e){
     var option=""
     for(i=0;i<result.results.length;i++){
     
-    string=string+"<figure><a href='"+result.results[i].urls.full+"'><img src='"+result.results[i].urls.thumb+"'><figcaption>"++"11</figcaption></a></figure>";
+    string=string+"<a href='"+result.results[i].urls.full+"'><img src='"+result.results[i].urls.thumb+"'></a>";
     if(i==e){
     option=option+"<option value='"+i+"' selected>"+(i+1)+"</option>";
     }else{
