@@ -1,5 +1,5 @@
 function pic(e){
-    $.ajax({url: "https://api.unsplash.com/search/photos?query=ufo&client_id=N57ByMLZkjM4fgCN-5gjXkdP6q2SZLIk6J7jQfC5CuA&page="+e+"&per_page=10", success: function(result){
+    $.ajax({url: "https://api.unsplash.com/search/photos?query=ufo&client_id=N57ByMLZkjM4fgCN-5gjXkdP6q2SZLIk6J7jQfC5CuA&page="+e+"&per_page=10&lang=zh-TW", success: function(result){
    
     var string=""
     var option=""
