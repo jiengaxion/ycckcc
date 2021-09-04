@@ -17,10 +17,12 @@ function srrs(a,b,c){
 
 
           $("#div12").html(Q);
-           
+            }
 
 
 
- }});
+});
   
+
+
 }
