@@ -9,5 +9,5 @@ function getLocation() {
 }
 
 function showPosition(position) {
- alert( position.coords.latitude + " " + position.coords.longitude)
+ return ( position.coords.latitude + " " + position.coords.longitude);
 }
