@@ -1,0 +1,242 @@
+<html>
+  <head>
+    <title>jq clendar
+    </title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+  <body>
+    <!-- Start your code here -->
+    <script>
+      var e =0
+      fff(0)
+
+      function fff(e){
+ $("#jt").find('tr').find('td').slideDown();
+$(document).ready(function(){
+      $("#jt").find('tr').find('td').css("text-align","center")
+
+      var now = new Date();
+      var days = new Date(now.getFullYear(),now.getMonth()+1+e,0).getDate()
+      var day =  new Date(now.getFullYear(),now.getMonth()+e,1).getDay()
+    var Year =  new Date(now.getFullYear(),now.getMonth()+e,1).getFullYear()
+var Month =  new Date(now.getFullYear(),now.getMonth()+e,1).getMonth()+1
+if(Month<10){Month='0'+Month}
+      $("#jt").find('tr').find('td').html('');
+$("#jt").find('caption').html('<button id="b2"><</button>&nbsp'+Year+'-'+Month+'&nbsp<button id="b1">></button>');
+      for(i=0;i<42;i++){
+   
+        if(i>=day && i<days+day){
+         $("#jt").find('tr').find('td').eq(i).html(i-day+1)
+        }
+        
+      }
+
+         
+      $('#b1').click(function(){
+        e+=1
+        fff(e)
+      })
+      $('#b2').click(function(){
+        e-=1
+        fff(e)
+      })
+
+if($("#jt").find('tr').find('td').eq(35).text()==""){
+         for(i=35;i<42;i++){
+         $("#jt").find('tr').find('td').eq(i).slideUp();
+          }
+        }
+   
+        
+      $("#jt").find('tr').find('td').css({
+        'border-radius':'5px 5px 5px 5px',
+        'border':'1px solid #CDCDCD',
+        'padding':'5px',  
+        'color':'#CDCDCD',
+      }
+                                        )
+      $("#jt").find('th').css({
+        'border-radius':'8px 8px 8px 8px',
+        'border':'1px solid #CDCDCD',
+        'padding':'5px',  
+        'color':'#CDCDCD',
+      }
+                             )
+      $("#jt").css({
+        'border-radius':'8px 8px 8px 8px',
+        'border':'1px solid #CDCDCD',
+        'padding':'5px',  
+        'background':'black'
+      }
+                  )
+if(Year == now.getFullYear() && Month==now.getMonth()+1){
+      $("#jt").find('tr').find('td').eq(day+now.getDate()-1).css({
+        'color':'red',
+        });}
+
+var x=0;
+var y=0;
+var tt,ttt;
+var mon,mono;
+     $("#m").change(function(){
+    
+
+while(true){
+
+       tt = new Date(now.getFullYear(),now.getMonth()+x,1)
+      ttt = new Date(now.getFullYear(),now.getMonth()+y,1)
+mon=tt.getMonth()+1 ;
+mono=ttt.getMonth()+1;
+if(mon<10){mon='0'+mon;}
+if(mono<10){mono='0'+mono;}
+  // $('z').html(x+'-'+y); 
+if( tt.getFullYear()+'-'+mon  == $(this).val()){fff(x);x=0;y=0;break;}
+if(ttt.getFullYear()+'-'+mono == $(this).val()){fff(y);y=0;x=0;break;}
+x=x+1;
+y=y-1;
+}
+
+
+      }) 
+
+
+
+
+
+ })
+
+      
+      }
+
+
+
+
+
+
+    </script>
+    <center><z></z>
+      <br/>
+      <br/>
+      <table  border="1"  id='jt'>
+        <caption></caption>
+        <tr>
+          <th>日
+          </th>
+          <th>一
+          </th>
+          <th>二
+          </th>
+          <th>三
+          </th>
+          <th>四
+          </th>
+          <th>五
+          </th>
+          <th>六
+          </th>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+<input type="month" id="m">
+      
+    </center>
+    <!-- End your code here -->
+
+</body>
+</html>
