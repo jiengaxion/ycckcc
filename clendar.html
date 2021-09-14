@@ -1,3 +1,5 @@
+
+
 <html>
   <head>
     <title>jq clendar
@@ -10,7 +12,7 @@
     <script>
       var e =0
       fff(0)
-
+  
       function fff(e){
  $("#jt").find('tr').find('td').slideDown();
 $(document).ready(function(){
@@ -21,13 +23,18 @@ $(document).ready(function(){
       var day =  new Date(now.getFullYear(),now.getMonth()+e,1).getDay()
     var Year =  new Date(now.getFullYear(),now.getMonth()+e,1).getFullYear()
 var Month =  new Date(now.getFullYear(),now.getMonth()+e,1).getMonth()+1
+
+
 if(Month<10){Month='0'+Month}
       $("#jt").find('tr').find('td').html('');
-$("#jt").find('caption').html('<button id="b2"><</button>&nbsp'+Year+'-'+Month+'&nbsp<button id="b1">></button>');
+$("#jt").find('caption').html('&nbsp'+Year+'-'+Month+'&nbsp');
       for(i=0;i<42;i++){
    
         if(i>=day && i<days+day){
-         $("#jt").find('tr').find('td').eq(i).html(i-day+1)
+     
+var k=new Date(now.getFullYear(),now.getMonth()+e,i-day+1).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)\s*?年/, (_,y)=>"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt((y-4)%12));
+ $("#jt").find('tr').find('td').eq(i).html('<font size=7>'+(i-day+1)+'</font><br>'+(k.substr(0,6)+'日'))
+
         }
         
       }
@@ -233,7 +240,7 @@ y=y-1;
           </td>
         </tr>
       </table>
-<input type="month" id="m">
+<button id="b2"><</button><button id="b1">></button><input type="month" id="m">
       
     </center>
     <!-- End your code here -->
