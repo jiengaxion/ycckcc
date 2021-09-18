@@ -2,6 +2,8 @@
 
 
 
+
+
 <html>
   <head>
     <title>jq clendar
@@ -10,11 +12,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-  <body>
+  <body onload='fff(0)'>
     <!-- Start your code here -->
     <script>
       var e =0
-      fff(0)
+     
   
       function fff(e){
 var a=0;
@@ -60,7 +62,7 @@ let  tas= i-day+1;
 
 let flag='<img src="https://www.countryflags.io/TW/flat/16.png">';
 if(tas == '1'  && Month=='01'){tat.eq(i).prepend(flag+'元旦<br>')}
-if(tas == '28' && Month=='02'){tat.eq(i).prepend(flag+'和平紀念日<br>')}
+if(tas == '28'  && Month=='02'){tat.eq(i).prepend(flag+'和平紀念日<br>')}
 if(tas == '8'  && Month=='03'){tat.eq(i).prepend('婦女節<br>')}
 if(tas == '12' && Month=='03'){tat.eq(i).prepend(flag+'國父逝世紀念日<br>')}
 if(tas == '14' && Month=='03'){tat.eq(i).prepend(flag+'反侵略日<br>')}
@@ -70,7 +72,6 @@ if(tas == '5'  && Month=='04'){tat.eq(i).prepend('民族掃墓節<br>')}
 if(tas == '7'  && Month=='04'){tat.eq(i).prepend('言論自由日<br>')}
 if(tas == '1'  && Month=='05'){tat.eq(i).prepend('勞動節<br>')}
 if(tas == '15' && Month=='07'){tat.eq(i).prepend(flag+'解嚴紀念日<br>')} 
-
 if(tas == '3'  && Month=='09'){tat.eq(i).prepend('軍人節<br>')}
 if(tas == '28' && Month=='09'){tat.eq(i).prepend(flag+'教師節<br>')}
 if(tas == '10' && Month=='10'){tat.eq(i).prepend(flag+'國慶日<br>')}
@@ -78,7 +79,32 @@ if(tas == '24' && Month=='10'){tat.eq(i).prepend(flag+'臺灣聯合國日<br>')}
 if(tas == '25' && Month=='10'){tat.eq(i).prepend('台灣光復節<br>')}
 if(tas == '12' && Month=='11'){tat.eq(i).prepend(flag+'國父誕辰紀念日<br>中華文化復興節<br>')}   
 if(tas == '25' && Month=='12'){tat.eq(i).prepend(flag+'行憲紀念日<br>聖誕節<br>')}
-    
+
+  if(tas == '20' && Month=='03'){tat.eq(i).append('<br>春分')}
+  if(tas == '20' && Month=='04'){tat.eq(i).append('<br>穀雨')}
+  if(tas == '6'  &&  Month=='05'){tat.eq(i).append('<br>立夏')}
+if(tas == '21'  &&  Month=='05'){tat.eq(i).append('<br>小滿')}
+if(tas == '6'  &&  Month=='06'){tat.eq(i).append('<br>芒種')}
+if(tas == '21'  &&  Month=='06'){tat.eq(i).append('<br>夏至')}
+ if(tas == '6'  &&  Month=='07'){tat.eq(i).append('<br>小暑')}
+ if(tas == '23'  &&  Month=='07'){tat.eq(i).append('<br>大暑')}
+ if(tas == '7'  &&  Month=='08'){tat.eq(i).append('<br>立秋')}
+ if(tas == '23'  &&  Month=='08'){tat.eq(i).append('<br>處暑')}
+ if(tas == '7'  &&  Month=='09'){tat.eq(i).append('<br>白露')}
+ if(tas == '23'  &&  Month=='09'){tat.eq(i).append('<br>秋分')}
+ if(tas == '8'  &&  Month=='10'){tat.eq(i).append('<br>寒露')}
+ if(tas == '23'  &&  Month=='10'){tat.eq(i).append('<br>霜降')}
+ if(tas == '6'  &&  Month=='11'){tat.eq(i).append('<br>立冬')}
+ if(tas == '22'  &&  Month=='11'){tat.eq(i).append('<br>小雪')}
+ if(tas == '7'  &&  Month=='12'){tat.eq(i).append('<br>大雪')}
+if(tas == '21'  &&  Month=='12'){tat.eq(i).append('<br>冬至')}
+if(tas == '5'  &&  Month=='01'){tat.eq(i).append('<br>小寒')}
+if(tas == '20'  &&  Month=='01'){tat.eq(i).append('<br>大寒')}
+if(tas == '3'  &&  Month=='02'){tat.eq(i).append('<br>立春')}
+if(tas == '18'  &&  Month=='02'){tat.eq(i).append('<br>雨水')}
+if(tas == '5'  &&  Month=='03'){tat.eq(i).append('<br>驚蟄')}
+
+
 if(k.substr(2,4)+'日' == '正月1 日'){tat.eq(i).append('<br>春節').append('<br>道教節')}
 if(k.substr(2,4)+'日' == '正月2 日'){tat.eq(i).append('<br>春節<br>車公誕')}
 if(k.substr(2,4)+'日' == '正月3 日'){tat.eq(i).append('<br>春節')}
@@ -90,7 +116,7 @@ if(k.substr(2,4)+'日' == '八月15日'){tat.eq(i).append('<br>中秋節')}
 if(k.substr(2,4)+'日' == '七月15日'){tat.eq(i).append('<br>中元節')} 
 if(k.substr(2,4)+'日' == '七月7 日'){tat.eq(i).append('<br>七夕')}
 if(k.substr(2,4)+'日' == '五月5 日'){tat.eq(i).append('<br>端午節')}
-if(k.substr(2,4)+'日' == '八月1 日'){tat.eq(i).append('<br>祖靈祭')}
+
 if(k.substr(2,4)+'日' == '九月9 日'){tat.eq(i).append('<br>重陽節')} 
 if(k.substr(2,4)+'日' == '腊月29日'){tat.eq(i).append('<br>除夕'); zusi[0]='<font size=7>'+(i-day+1)+'</font><br>'+nom;}
 if(k.substr(2,4)+'日' == '腊月30日'){tat.eq(i).append('<br>除夕'); zusi[1]=i; }
@@ -107,10 +133,12 @@ tat.eq(i).prepend('母親節<br>')
 <!--母親節-->
 
 
+
 }
 
 
-      }
+      
+      } 
    $('#b1').slideDown()
          $('#b2').slideDown() 
  
@@ -207,7 +235,6 @@ while(true){
 
  })
 
-      
       }
 
 
@@ -334,7 +361,7 @@ while(true){
           </td>
         </tr>
       </table>
-<button id="b2"><</button><button id="b1">></button><input type="month" id="m">
+<button id="b2"><</button><button id="b1">></button><input type="month" id="m">✨:今天
 
     </center>
     <!-- End your code here -->
