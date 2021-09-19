@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 <html>
   <head>
     <title>jq clendar
@@ -14,13 +8,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-  <body onload=fff(Number(sessionStorage.clickcount))>
+  <body onload=fff(localStorage.clickcount)>
     <!-- Start your code here -->
     <script>
       var e =0
      var count=0
   
-
+if (localStorage.clickcount) {
+  localStorage.clickcount = Number(localStorage.clickcount) ;
+} else {
+  localStorage.clickcount = 0;
+}
 
 
 
@@ -383,3 +381,11 @@ if(count ==5){
 
 </body>
 </html>
+
+
+
+
+
+
+
+
