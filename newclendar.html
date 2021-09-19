@@ -4,6 +4,8 @@
 
 
 
+
+
 <html>
   <head>
     <title>jq clendar
@@ -12,13 +14,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-  <body onload='fff(0)'>
+  <body onload=fff(Number(sessionStorage.clickcount))>
     <!-- Start your code here -->
     <script>
       var e =0
-     
+     var count=0
   
+
+
+
+
+
+
       function fff(e){
+count=count+1;
 var a=0;
 let zusi=[];
 let tat = $("#jt").find('tr').find('td')
@@ -222,8 +231,8 @@ while(true){
    if(mon<10){mon='0'+mon;}
    if(mono<10){mono='0'+mono;}
   // $('z').html(x+'-'+y); 
-  if( tt.getFullYear()+'-'+mon  == $(this).val()){fff(x);x=0;y=0;break;}
-  if(ttt.getFullYear()+'-'+mono == $(this).val()){fff(y);y=0;x=0;break;}
+  if( tt.getFullYear()+'-'+mon  === $(this).val()){fff(x);x=0;y=0;e=x;break;}
+  if(ttt.getFullYear()+'-'+mono === $(this).val()){fff(y);y=0;x=0;e=y;break;}
   x=x+1;
   y=y-1;
   }
@@ -235,8 +244,14 @@ while(true){
 
  })
 
-      }
+if(count ==5){
 
+ sessionStorage.clickcount = e
+
+  window.location.reload()
+
+}
+      }
 
 
 
