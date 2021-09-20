@@ -1,0 +1,388 @@
+
+
+<html>
+  <head>
+    <title>jq clendar
+    </title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+  <body onload=fff(Number(sessionStorage.getItem('clickcoun')))>
+    <!-- Start your code here -->
+    <script>
+      var e =0
+     var count=0
+   
+
+
+//alert(sessionStorage.getItem('clickcoun'))
+
+
+
+      function fff(e){
+
+count=count+1;
+
+
+
+var a=0;
+let zusi=[];
+let tat = $("#jt").find('tr').find('td')
+ $("#jt").find('tr').find('td').slideDown();
+$(document).ready(function(){
+      $("#jt").find('tr').find('td').css("text-align","center")
+ $("#jt").find('caption').css("font-size","30")
+      var now = new Date();
+      var days = new Date(now.getFullYear(),now.getMonth()+1+e,0).getDate()
+      var day =  new Date(now.getFullYear(),now.getMonth()+e,1).getDay()
+    var Year =  new Date(now.getFullYear(),now.getMonth()+e,1).getFullYear()
+var Month =  new Date(now.getFullYear(),now.getMonth()+e,1).getMonth()+1
+
+
+if(Month<10){Month='0'+Month}
+      $("#jt").find('tr').find('td').html('');
+$("#jt").find('caption').html('&nbsp'+Year+'-'+Month+'&nbsp');
+      for(i=0;i<42;i++){
+
+        if(i>=day && i<days+day){
+     
+var k=new Date(now.getFullYear(),now.getMonth()+e,i-day+1).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)\s*?年/, (_,y)=>"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt((y-4)%12));
+
+
+let nom=k.substr(0,7);
+
+if(nom[5]==" "){nom=k.substr(0,6).replace(k.substr(0,6),k.substr(0,4)+"初"+k.substr(4,1))}
+if(nom[5]=="0" && nom[4]=="1"){nom=k.substr(0,6).replace(k.substr(0,6),k.substr(0,4)+"初十")}
+if(nom[2]=="十" && nom[3]=="一" && nom[6]==" "){nom=k.substr(0,7).replace(k.substr(0,7),k.substr(0,5)+"初"+k.substr(5,1))}
+
+ 
+$("#jt").find('tr').find('td').eq(i).html('<font size=4>'+(i-day+1)+'</font><br><font size=1>'+nom.substr(2,6)+'<font>')
+
+
+
+
+
+
+
+let  tas= i-day+1;
+
+let flag='<img src="https://www.countryflags.io/TW/flat/16.png">';
+if(tas == '1'  && Month=='01'){tat.eq(i).prepend(flag+'元旦<br>')}
+if(tas == '28'  && Month=='02'){tat.eq(i).prepend(flag+'和平紀念日<br>')}
+if(tas == '8'  && Month=='03'){tat.eq(i).prepend('婦女節<br>')}
+if(tas == '12' && Month=='03'){tat.eq(i).prepend(flag+'國父逝世紀念日<br>')}
+if(tas == '14' && Month=='03'){tat.eq(i).prepend(flag+'反侵略日<br>')}
+if(tas == '29' && Month=='03'){tat.eq(i).prepend(flag+'革命先烈紀念日<br>')}
+if(tas == '4'  && Month=='04'){tat.eq(i).prepend('兒童節<br>')}
+if(tas == '5'  && Month=='04'){tat.eq(i).prepend('民族掃墓節<br>')}
+if(tas == '7'  && Month=='04'){tat.eq(i).prepend('言論自由日<br>')}
+if(tas == '1'  && Month=='05'){tat.eq(i).prepend('勞動節<br>')}
+if(tas == '15' && Month=='07'){tat.eq(i).prepend(flag+'解嚴紀念日<br>')} 
+if(tas == '3'  && Month=='09'){tat.eq(i).prepend('軍人節<br>')}
+if(tas == '28' && Month=='09'){tat.eq(i).prepend(flag+'教師節<br>')}
+if(tas == '10' && Month=='10'){tat.eq(i).prepend(flag+'國慶日<br>')}
+if(tas == '24' && Month=='10'){tat.eq(i).prepend(flag+'臺灣聯合國日<br>')} 
+if(tas == '25' && Month=='10'){tat.eq(i).prepend('台灣光復節<br>')}
+if(tas == '12' && Month=='11'){tat.eq(i).prepend(flag+'國父誕辰紀念日<br>中華文化復興節<br>')}   
+if(tas == '25' && Month=='12'){tat.eq(i).prepend(flag+'行憲紀念日<br>聖誕節<br>')}
+
+  if(tas == '20' && Month=='03'){tat.eq(i).append('<br>春分')}
+  if(tas == '20' && Month=='04'){tat.eq(i).append('<br>穀雨')}
+  if(tas == '6'  &&  Month=='05'){tat.eq(i).append('<br>立夏')}
+if(tas == '21'  &&  Month=='05'){tat.eq(i).append('<br>小滿')}
+if(tas == '6'  &&  Month=='06'){tat.eq(i).append('<br>芒種')}
+if(tas == '21'  &&  Month=='06'){tat.eq(i).append('<br>夏至')}
+ if(tas == '6'  &&  Month=='07'){tat.eq(i).append('<br>小暑')}
+ if(tas == '23'  &&  Month=='07'){tat.eq(i).append('<br>大暑')}
+ if(tas == '7'  &&  Month=='08'){tat.eq(i).append('<br>立秋')}
+ if(tas == '23'  &&  Month=='08'){tat.eq(i).append('<br>處暑')}
+ if(tas == '7'  &&  Month=='09'){tat.eq(i).append('<br>白露')}
+ if(tas == '23'  &&  Month=='09'){tat.eq(i).append('<br>秋分')}
+ if(tas == '8'  &&  Month=='10'){tat.eq(i).append('<br>寒露')}
+ if(tas == '23'  &&  Month=='10'){tat.eq(i).append('<br>霜降')}
+ if(tas == '6'  &&  Month=='11'){tat.eq(i).append('<br>立冬')}
+ if(tas == '22'  &&  Month=='11'){tat.eq(i).append('<br>小雪')}
+ if(tas == '7'  &&  Month=='12'){tat.eq(i).append('<br>大雪')}
+if(tas == '21'  &&  Month=='12'){tat.eq(i).append('<br>冬至')}
+if(tas == '5'  &&  Month=='01'){tat.eq(i).append('<br>小寒')}
+if(tas == '20'  &&  Month=='01'){tat.eq(i).append('<br>大寒')}
+if(tas == '3'  &&  Month=='02'){tat.eq(i).append('<br>立春')}
+if(tas == '18'  &&  Month=='02'){tat.eq(i).append('<br>雨水')}
+if(tas == '5'  &&  Month=='03'){tat.eq(i).append('<br>驚蟄')}
+
+
+if(k.substr(2,4)+'日' == '正月1 日'){tat.eq(i).append('<br>春節').append('<br>道教節')}
+if(k.substr(2,4)+'日' == '正月2 日'){tat.eq(i).append('<br>春節<br>車公誕')}
+if(k.substr(2,4)+'日' == '正月3 日'){tat.eq(i).append('<br>春節')}
+if(k.substr(2,4)+'日' == '正月4 日'){tat.eq(i).append('<br>春節<br>接神日')}
+if(k.substr(2,4)+'日' == '正月5 日'){tat.eq(i).append('<br>春節')}
+if(k.substr(2,4)+'日' == '正月15日'){tat.eq(i).append('<br>元宵節')}
+if(k.substr(2,4)+'日' == '二月15日'){tat.eq(i).append('<br>太上老君誕')}
+if(k.substr(2,4)+'日' == '八月15日'){tat.eq(i).append('<br>中秋節')}
+if(k.substr(2,4)+'日' == '七月15日'){tat.eq(i).append('<br>中元節')} 
+if(k.substr(2,4)+'日' == '七月7 日'){tat.eq(i).append('<br>七夕')}
+if(k.substr(2,4)+'日' == '五月5 日'){tat.eq(i).append('<br>端午節')}
+
+if(k.substr(2,4)+'日' == '九月9 日'){tat.eq(i).append('<br>重陽節')} 
+if(k.substr(2,4)+'日' == '腊月29日'){tat.eq(i).append('<br>除夕'); zusi[0]='<font size=7>'+(i-day+1)+'</font><br>'+nom;}
+if(k.substr(2,4)+'日' == '腊月30日'){tat.eq(i).append('<br>除夕'); zusi[1]=i; }
+
+if(k.substr(2,4)+'日' == '四月8 日'){tat.eq(i).prepend(flag+'佛陀誕辰紀念日<br>')}
+
+<!--母親節-->
+if(new Date(now.getFullYear(),now.getMonth()+e, tas).getDay()==0 && Month == '05'){
+a=a+1;
+if(a==2){
+tat.eq(i).prepend('母親節<br>')
+}
+}
+<!--母親節-->
+
+
+
+}
+
+
+      
+      } 
+   $('#b1').slideDown()
+         $('#b2').slideDown() 
+ 
+<!--除夕
+if(zusi[0]!=undefined){
+$("#jt").find('tr').find('td').eq(zusi[1]-1).html(zusi[0])
+}
+-->
+
+      $('#b1').click(function(){
+  $('#b1').slideUp()
+ $('#b2').slideUp()
+        e+=1
+        fff(e)
+      
+      })
+      $('#b2').click(function(){
+ $('#b2').slideUp()
+ $('#b1').slideUp()
+        e-=1
+        fff(e)
+      })
+
+     if($("#jt").find('tr').find('td').eq(35).text()==""){
+         for(i=35;i<42;i++){
+         $("#jt").find('tr').find('td').eq(i).slideUp();
+          }
+        }
+$("#clr").val(sessionStorage.getItem('yccclr'))
+     color(sessionStorage.getItem('yccclr'))
+ sessionStorage.setItem('yccclr',$("#clr").val() )      
+    
+for(i=0;i<42;i++){
+if(i == 0 || i == 6){  
+$("#jt").find('th').eq(i).css({
+        'color':'red'
+      })
+}
+if(i == 0 || i == 6 || i == 7 || i == 13 || i == 14 || i == 20 || i == 21 || i == 27 || i == 28 || i == 34 || i == 35 || i == 41 || i==42){  
+$("#jt").find('tr').find('td').eq(i).css({
+        'color':'red'
+      })
+}
+}
+<!--今天-->
+if(Year == now.getFullYear() && Month==now.getMonth()+1){
+$("#jt").find('tr').find('td').eq(day+now.getDate()-1).prepend('✨')
+}
+<!--今天-->
+
+<!--自選月份-->
+var x=0;
+var y=0;
+var tt,ttt;
+var mon,mono;     
+$("#m").change(function(){
+while(true){
+       tt = new Date(now.getFullYear(),now.getMonth()+x,1)
+      ttt = new Date(now.getFullYear(),now.getMonth()+y,1)
+   mon=tt.getMonth()+1 ;
+ mono=ttt.getMonth()+1;
+   if(mon<10){mon='0'+mon;}
+   if(mono<10){mono='0'+mono;}
+  // $('z').html(x+'-'+y); 
+  if( tt.getFullYear()+'-'+mon  === $(this).val()){fff(x);e=x;x=0;y=0;break;}
+  if(ttt.getFullYear()+'-'+mono === $(this).val()){fff(y);e=y;y=0;x=0;break;}
+  x=x+1;
+  y=y-1;
+  }
+  }) 
+<!--自選月份-->
+
+
+
+
+ })
+if(count ==3){
+
+sessionStorage.setItem('yccclr',$("#clr").val() )  
+sessionStorage.setItem('clickcoun', e)
+  window.location.reload()
+}
+
+      }
+
+function color(a){
+  $("#jt").find('tr').find('td').css({
+        'border-radius':'5px 5px 5px 5px',
+        'border':'1px solid '+a,
+        'padding':'5px',  
+        'color':'white',
+        'font-size':'2px'
+      }
+                                        )
+      $("#jt").find('th').css({
+        'border-radius':'8px 8px 8px 8px',
+        'border':'1px solid '+a,
+        'padding':'5px',  
+        'color':'white',
+      }
+                             )
+      $("#jt").css({
+        'border-radius':'8px 8px 8px 8px',
+        'border':'1px solid'+a,
+        'padding':'5px',  
+        'background':'black'
+      }
+                  )
+
+
+}
+
+
+
+    </script>
+    <center><z></z>
+      <br/>
+      <br/>
+      <table  border="1"  id='jt'>
+        <caption></caption>
+        <tr>
+          <th>日
+          </th>
+          <th>一
+          </th>
+          <th>二
+          </th>
+          <th>三
+          </th>
+          <th>四
+          </th>
+          <th>五
+          </th>
+          <th>六
+          </th>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+<input type='color' value='#CDCDCD' id='clr'><button id="b2"><</button><button id="b1">></button><input type="month" id="m">✨:今天
+
+    </center>
+    <!-- End your code here -->
+
+</body>
+</html>
