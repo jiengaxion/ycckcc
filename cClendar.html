@@ -1,5 +1,7 @@
 
 
+
+
 <html>
   <head>
     <title>jq clendar
@@ -24,7 +26,7 @@
 
 count=count+1;
 
-
+ $("#cc").hide();
 
 var a=0;
 let zusi=[];
@@ -155,6 +157,15 @@ $("#jt").find('tr').find('td').eq(zusi[1]-1).html(zusi[0])
 }
 -->
 
+$("#clr").change(function(){
+
+fff(e)
+sessionStorage.setItem('yccclr',$("#clr").val() )  
+} 
+)
+
+
+
       $('#b1').click(function(){
   $('#b1').slideUp()
  $('#b2').slideUp()
@@ -176,7 +187,7 @@ $("#jt").find('tr').find('td').eq(zusi[1]-1).html(zusi[0])
         }
 $("#clr").val(sessionStorage.getItem('yccclr'))
      color(sessionStorage.getItem('yccclr'))
- sessionStorage.setItem('yccclr',$("#clr").val() )      
+sessionStorage.setItem('yccclr',$("#clr").val() )  
     
 for(i=0;i<42;i++){
 if(i == 0 || i == 6){  
@@ -218,7 +229,7 @@ while(true){
   }) 
 <!--自選月份-->
 
-
+ $("#cc").show();
 
 
  })
@@ -236,7 +247,7 @@ function color(a){
         'border-radius':'5px 5px 5px 5px',
         'border':'1px solid '+a,
         'padding':'5px',  
-        'color':'white',
+        'color':'black',
         'font-size':'2px'
       }
                                         )
@@ -244,23 +255,23 @@ function color(a){
         'border-radius':'8px 8px 8px 8px',
         'border':'1px solid '+a,
         'padding':'5px',  
-        'color':'white',
+        'color':'black',
       }
                              )
       $("#jt").css({
         'border-radius':'8px 8px 8px 8px',
         'border':'1px solid'+a,
         'padding':'5px',  
-        'background':'black'
+        'background':'white'
       }
                   )
-
 
 }
 
 
 
     </script>
+<div id='cc'>
     <center><z></z>
       <br/>
       <br/>
@@ -378,9 +389,9 @@ function color(a){
           <td>
           </td>
         </tr>
-      </table>
-<input type='color' value='#CDCDCD' id='clr'><button id="b2"><</button><button id="b1">></button><input type="month" id="m">✨:今天
-
+      </table><br>
+<input type='color' value='#CDCDCD' id='clr'>&nbsp&nbsp<button id="b2"><</button>&nbsp&nbsp<button id="b1">></button>&nbsp&nbsp<input type="month" id="m">✨:今天
+</div>
     </center>
     <!-- End your code here -->
 
