@@ -15,7 +15,7 @@ var y;
                var Q=Object.values(obj)+Q;
  //y1=Q.split('|~|');
 $( "#shopsss" ).slideUp( "slow", function() {
-      $("#shopsss").animate({scrollTop:$("#shopsss").offset().top}, 800);
+      $("#shopsss").animate({scrollTop:$("#shopsss").offset().top}, 100);
       $("#shopsss").slideDown();
 $("#shopsss").html(Q);
   });
