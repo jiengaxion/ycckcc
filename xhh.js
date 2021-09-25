@@ -14,7 +14,7 @@ var y;
 
                var Q=Object.values(obj)+Q;
  //y1=Q.split('|~|');
-                      $("html,body").animate({scrollTop:$(".food").offset().top}, 100);
+                      $("html,body").animate({scrollTop:$(".food").offset().top-$(".food").position().top }, 100);
 $( "#shopsss" ).slideUp( "slow", function() {
      
       $("#shopsss").slideDown();
