@@ -17,7 +17,7 @@ var y;
 $( "#shopsss" ).slideUp( "slow", function() {
      
       $("#shopsss").slideDown();
-      $("#shopsss").animate({scrollTop:$("#shopsss").offset().top}, 100);
+      $("html,body").animate({scrollTop:$("#shopsss").offset().top}, 100);
 $("#shopsss").html(Q);
   });
 
