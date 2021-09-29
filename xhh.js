@@ -14,12 +14,14 @@ var y;
 
                var Q=Object.values(obj)+Q;
  //y1=Q.split('|~|');
-                    //$("html,body").animate({scrollTop:$(".food").offset().top-200 }, 100);
+                    
 $( "#shopsss" ).slideUp( "slow", function() {
      
       $("#shopsss").slideDown();
      
 $("#shopsss").html(Q);
+      
+      $("html,body").animate({scrollTop:$(".food").offset().top}, 800);
   });
 
            
