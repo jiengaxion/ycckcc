@@ -12,7 +12,7 @@ function srrs(a,b,c){
                var Q=Object.values(obj)+Q;
 
 
-
+Q=Q.replace("undefined","")
                  
 
 
