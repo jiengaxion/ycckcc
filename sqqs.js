@@ -11,7 +11,7 @@ function sqqs(a){
 
                var Q=Object.values(obj)+Q;
 
-
+Q=Q.replace("undefined","")
 
                  
 
