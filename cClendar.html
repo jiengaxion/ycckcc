@@ -69,25 +69,25 @@ $("#jt").find('tr').find('td').eq(i).html('<font size=4>'+(i-day+1)+'</font><br>
 
 let  tas= i-day+1;
 
-let flag='<img src="https://www.countryflags.io/TW/flat/16.png">';
-if(tas == '1'  && Month=='01'){tat.eq(i).prepend(flag+'元旦<br>')}
-if(tas == '28'  && Month=='02'){tat.eq(i).prepend(flag+'和平紀念日<br>')}
+
+if(tas == '1'  && Month=='01'){tat.eq(i).prepend('元旦<br>')}
+if(tas == '28'  && Month=='02'){tat.eq(i).prepend('和平紀念日<br>')}
 if(tas == '8'  && Month=='03'){tat.eq(i).prepend('婦女節<br>')}
-if(tas == '12' && Month=='03'){tat.eq(i).prepend(flag+'國父逝世紀念日<br>')}
-if(tas == '14' && Month=='03'){tat.eq(i).prepend(flag+'反侵略日<br>')}
-if(tas == '29' && Month=='03'){tat.eq(i).prepend(flag+'革命先烈紀念日<br>')}
+if(tas == '12' && Month=='03'){tat.eq(i).prepend('國父逝世紀念日<br>')}
+if(tas == '14' && Month=='03'){tat.eq(i).prepend('反侵略日<br>')}
+if(tas == '29' && Month=='03'){tat.eq(i).prepend('革命先烈紀念日<br>')}
 if(tas == '4'  && Month=='04'){tat.eq(i).prepend('兒童節<br>')}
 if(tas == '5'  && Month=='04'){tat.eq(i).prepend('民族掃墓節<br>')}
 if(tas == '7'  && Month=='04'){tat.eq(i).prepend('言論自由日<br>')}
 if(tas == '1'  && Month=='05'){tat.eq(i).prepend('勞動節<br>')}
-if(tas == '15' && Month=='07'){tat.eq(i).prepend(flag+'解嚴紀念日<br>')} 
+if(tas == '15' && Month=='07'){tat.eq(i).prepend('解嚴紀念日<br>')} 
 if(tas == '3'  && Month=='09'){tat.eq(i).prepend('軍人節<br>')}
-if(tas == '28' && Month=='09'){tat.eq(i).prepend(flag+'教師節<br>')}
-if(tas == '10' && Month=='10'){tat.eq(i).prepend(flag+'國慶日<br>')}
-if(tas == '24' && Month=='10'){tat.eq(i).prepend(flag+'臺灣聯合國日<br>')} 
+if(tas == '28' && Month=='09'){tat.eq(i).prepend('教師節<br>')}
+if(tas == '10' && Month=='10'){tat.eq(i).prepend('國慶日<br>')}
+if(tas == '24' && Month=='10'){tat.eq(i).prepend('臺灣聯合國日<br>')} 
 if(tas == '25' && Month=='10'){tat.eq(i).prepend('台灣光復節<br>')}
-if(tas == '12' && Month=='11'){tat.eq(i).prepend(flag+'國父誕辰紀念日<br>中華文化復興節<br>')}   
-if(tas == '25' && Month=='12'){tat.eq(i).prepend(flag+'行憲紀念日<br>聖誕節<br>')}
+if(tas == '12' && Month=='11'){tat.eq(i).prepend('國父誕辰紀念日<br>中華文化復興節<br>')}   
+if(tas == '25' && Month=='12'){tat.eq(i).prepend('行憲紀念日<br>聖誕節<br>')}
 
   if(tas == '20' && Month=='03'){tat.eq(i).append('<br>春分')}
   if(tas == '20' && Month=='04'){tat.eq(i).append('<br>穀雨')}
@@ -130,7 +130,7 @@ if(k.substr(2,4)+'日' == '九月9 日'){tat.eq(i).append('<br>重陽節')}
 if(k.substr(2,4)+'日' == '腊月29日'){tat.eq(i).append('<br>除夕'); zusi[0]='<font size=7>'+(i-day+1)+'</font><br>'+nom;}
 if(k.substr(2,4)+'日' == '腊月30日'){tat.eq(i).append('<br>除夕'); zusi[1]=i; }
 
-if(k.substr(2,4)+'日' == '四月8 日'){tat.eq(i).prepend(flag+'佛陀誕辰紀念日<br>')}
+if(k.substr(2,4)+'日' == '四月8 日'){tat.eq(i).prepend('佛陀誕辰紀念日<br>')}
 
 <!--母親節-->
 if(new Date(now.getFullYear(),now.getMonth()+e, tas).getDay()==0 && Month == '05'){
